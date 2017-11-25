@@ -21,6 +21,7 @@ public class UserController {
         List<User> list = userService.findAll();
         model.addAttribute("list",list);
         return "user";
+
     }
 
 }
