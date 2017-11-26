@@ -1,0 +1,17 @@
+.Wdate{width:148px; padding:0 0 0 20px; 
+	border:#c9c9c9 0 solid;
+	height:27px;
+	background:#fff url(datePicker.gif) no-repeat  left 8px;
+}
+
+.Wdate.txt{width:148px; padding:0 0 0 20px; 
+	border:#c9c9c9 0 solid;
+	height:27px;
+	background:#fff url(datePicker.gif) no-repeat  right 8px;
+}
+
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}
