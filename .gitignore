@@ -1,0 +1,14 @@
+.classpath
+.idea
+.project
+.settings
+target
+hx.log.*
+.DS_Store
+log
+logs
+detail
+simg
+.externalToolBuilders
+maven-eclipse.xml
+*.iml
