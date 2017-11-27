@@ -8,9 +8,8 @@ import java.util.List;
 public interface UserMapper {
     public User login(@Param("FName")String username, @Param("FPassword")String password);
     public List<User> findAll();
-<<<<<<< HEAD
+
 
     public void save(User user);
-=======
->>>>>>> origin/master
+
 }
