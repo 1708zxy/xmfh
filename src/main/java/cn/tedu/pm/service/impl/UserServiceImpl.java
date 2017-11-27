@@ -3,11 +3,7 @@ package cn.tedu.pm.service.impl;
 import cn.tedu.pm.mapper.UserMapper;
 import cn.tedu.pm.pojo.User;
 import cn.tedu.pm.service.UserService;
-<<<<<<< HEAD
 import cn.tedu.pm.utils.Md5Utils;
-=======
-
->>>>>>> origin/master
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +27,6 @@ public class UserServiceImpl implements UserService  {
     }
 
     public void save(User user) {
-        /* TODO  */
 
         user.setFPassword(Md5Utils.getMd5(user.getFPassword(), user.getFName()));
 
