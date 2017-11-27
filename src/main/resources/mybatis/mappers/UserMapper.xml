@@ -14,8 +14,8 @@
             values(#{FUserID},#{FName},#{FPassword},#{FPhone},#{FNickname},#{FEmail},#{FCreateTime},#{FCreateUser})
         </insert>
 
-        <select id="login" resultMap="User">
-            <include refid="usersql"/> where FName=#{FName} and FPassword=#{FPassword}
+        <select id="login" resultType="User">
+            SELECT * FROM tbl_user where FName=#{FName} and FPassword=#{FPassword}
         </select>
 </mapper>
 
