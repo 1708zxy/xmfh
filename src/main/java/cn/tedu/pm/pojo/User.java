@@ -1,10 +1,20 @@
 package cn.tedu.pm.pojo;
 
+
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
+
 
 public class User {
 
-    private Integer FUserID;
+    @Id
+    @Column(name="FUserID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Integer FUserID;
 
     private String FName;
 
@@ -25,7 +35,7 @@ public class User {
     }
 
     public void setFUserID(Integer FUserID) {
-        this.FUserID = FUserID;
+        this.FUserID=FUserID;
     }
 
     public String getFName() {

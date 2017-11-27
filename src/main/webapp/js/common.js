@@ -310,3 +310,9 @@ $('.man').each(function(index){
 		
  
  });
+function formSubmit (url,sTarget){
+    document.forms[0].target = sTarget
+    document.forms[0].action = url;
+    document.forms[0].submit();
+    return true;
+}

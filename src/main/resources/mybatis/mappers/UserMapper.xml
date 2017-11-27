@@ -2,10 +2,14 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.tedu.pm.mapper.UserMapper">
+    <mapper namespace="cn.tedu.pm.mapper.UserMapper">
 
-    <select id="findAll" resultType="User">
-        SELECT * FROM tbl_user
-    </select>
+        <select id="findAll" resultType="User">
+            SELECT * FROM tbl_user
+        </select>
 
-</mapper>
+        <insert id="save" >
+            INSERT INTO  tbl_user (FUserID,FName,FPassword,FPhone,FNickname,FEmail,FCreateTime,FCreateUser)
+            values(#{FUserID},#{FName},#{FPassword},#{FPhone},#{FNickname},#{FEmail},#{FCreateTime},#{FCreateUser})
+        </insert>
+    </mapper>

@@ -8,4 +8,5 @@ public interface UserMapper {
 
     public List<User> findAll();
 
+    public void save(User user);
 }
