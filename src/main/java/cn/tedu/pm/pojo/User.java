@@ -1,5 +1,6 @@
 package cn.tedu.pm.pojo;
 
+<<<<<<< HEAD
 
 
 import javax.persistence.Column;
@@ -10,6 +11,12 @@ import java.util.Date;
 
 
 public class User {
+=======
+import java.io.Serializable;
+import java.util.Date;
+
+public class User implements Serializable {
+>>>>>>> origin/master
 
     @Id
     @Column(name="FUserID")

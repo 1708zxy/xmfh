@@ -2,6 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD
     <mapper namespace="cn.tedu.pm.mapper.UserMapper">
 
         <select id="findAll" resultType="User">
@@ -13,3 +14,13 @@
             values(#{FUserID},#{FName},#{FPassword},#{FPhone},#{FNickname},#{FEmail},#{FCreateTime},#{FCreateUser})
         </insert>
     </mapper>
+
+<mapper namespace="cn.tedu.pm.mapper.UserMapper">
+    <select id="findAll" resultType="User">
+        SELECT * FROM tbl_user
+    </select>
+    <select id="login" resultMap="User">
+        <include refid="usersql"/> where FName=#{FName} and FPassword=#{FPassword}
+    </select>
+</mapper>
+

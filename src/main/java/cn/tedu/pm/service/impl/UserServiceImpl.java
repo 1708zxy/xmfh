@@ -3,7 +3,11 @@ package cn.tedu.pm.service.impl;
 import cn.tedu.pm.mapper.UserMapper;
 import cn.tedu.pm.pojo.User;
 import cn.tedu.pm.service.UserService;
+<<<<<<< HEAD
 import cn.tedu.pm.utils.Md5Utils;
+=======
+
+>>>>>>> origin/master
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +21,11 @@ public class UserServiceImpl implements UserService  {
     @Autowired
     private UserMapper userMapper;
 
+
+
+    public User login(String FName, String FPassword) {
+        return userMapper.login(FName,FPassword);
+    }
     public List<User> findAll() {
         return userMapper.findAll();
     }
