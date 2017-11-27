@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: CGB 1L
-  Date: 2017/11/26
-  Time: 9:16
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="/WEB-INF/common/common.jsp"%>
 <html lang="zh-CN">
 <head>
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
