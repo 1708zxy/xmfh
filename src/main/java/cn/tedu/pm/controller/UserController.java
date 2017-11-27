@@ -18,9 +18,9 @@ public class UserController {
 
     @RequestMapping("/findAll")
     public String findAll(Model model){
-        List<User> list = userService.findAll();
-        model.addAttribute("list",list);
-        return "user";
+        /*List<User> list = userService.findAll();
+        model.addAttribute("list",list);*/
+        return "login";
 
     }
 
