@@ -1,14 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/common/common.jsp"%>
-<%--
-  Created by IntelliJ IDEA.
-  User: CGB 1L
-  Date: 2017/11/26
-  Time: 10:07
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
 <html lang="zh-CN">
@@ -22,13 +15,14 @@
     <meta content="email=no" name="format-detection" />
     <title>嘀嗒</title>
     <link type="text/css" rel="stylesheet" href="${ctx}/staticfile/css/common.css">
-    <link type="text/css" rel="stylesheet" href="${ctx}/staticfile/css/login.css">
+    <link type="text/css" rel="stylesheet" href="${ctx}/staticfile/css/top.css">
+    <link type="text/css" rel="stylesheet" href="${ctx}/staticfile/css/index.css">
     <script type="text/javascript" src="${ctx}/staticfile/js/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="${ctx}/staticfile/js/common.js"></script>
+    <script type="text/javascript" src="${ctx}/staticfile/js/jQselect.js"></script>
 
-    <link rel="stylesheet" href="${ctx}/staticfile/validator/jquery.validator.css">
-    <script type="text/javascript" src="${ctx}/staticfile/validator/jquery.validator.js"></script>
-    <script type="text/javascript" src="${ctx}/staticfile/validator/local/zh-CN.js"></script>
+    <script type="text/javascript" src="${ctx}/staticfile/js/mousewheel.js"></script>
+    <script type="text/javascript" src="${ctx}/staticfile/js/easyscroll.js"></script>
 
     <script type="text/javascript">
         function navList(id) {
@@ -826,7 +820,7 @@
                 </td>
                 <td align="right">所属上级</td>
                 <td align="left">
-                    <select name="FHiLevel.FUserID">
+                    <select name="FHiLevel">
                         <option>-无-</option>
                     <c:forEach items="${empList}" var="e">
                         <option value ="${e.FUserID}">${e.FName}</option>
