@@ -20,7 +20,6 @@ public class EmpServiceImpl implements EmpService{
     }
 
     public void add(Emp emp) {
-        emp.setFUserID(UUID.randomUUID().toString());
         emp.setFEntryDate(new Date());
         empMapper.add(emp);
     }

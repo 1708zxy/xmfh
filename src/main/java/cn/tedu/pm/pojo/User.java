@@ -12,10 +12,6 @@ import java.util.Date;
 
 public class User implements Serializable {
 
-
-    @Id
-    @Column(name="FUserID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer FUserID;
 
     private String FName;

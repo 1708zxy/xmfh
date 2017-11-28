@@ -17,5 +17,9 @@
         <select id="login" resultType="User">
             SELECT * FROM tbl_user where FName=#{FName} and FPassword=#{FPassword}
         </select>
+
+        <select id="findOneByUsername" resultType="User">
+             SELECT * FROM tbl_user where FName=#{username}
+        </select>
 </mapper>
 

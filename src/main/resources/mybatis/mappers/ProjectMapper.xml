@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.tedu.pm.mapper.ProjectMapper">
+
+
+<select id="findServlet" resultType="Project">
+    SELECT  *  FROM  tbl_project
+    <where>
+        <if test="FName!=null">FName like concat(concat('%',#{FName}),'%') </if>
+        <if test="FPM!=null">AND FPM=#{FPM}</if>
+        <if test="FStatus!=null">AND FStatus=#{FStatus}</if>
+    </where>
+</select>
+    <insert id="tosave">
+        INSERT  INTO tbl_project
+        (FNumber,FName,FPM,FDeptID,FDescribe,FStatus,FCreateTime,FCreateUser)
+        VALUES
+        (#{FNumber},#{FName},#{FPM},#{FDeptId},#{FDescribe},#{FStatus},#{FCreateTime},#{FCreateUser})
+    </insert>
+
+    <select id="findMyAll" resultType="Project">
+      select * from tbl_project WHERE FCreateuser = #{userId}
+    </select>
+    <!--<select id="findSubAll" resultType="Project">-->
+        <!--select * from tbl_project p-->
+          <!--SELECT * FROM tbl_emp-->
+    <!--</select>-->
+
+    <select id="selectStatusC" resultType="int">
+        SELECT COUNT(*) c1 FROM tbl_project WHERE FStatus = 1 AND FCreateuser = #{userId}
+        UNION ALL
+        SELECT COUNT(*) c1 FROM tbl_project WHERE FStatus = 2 AND FCreateuser = #{userId}
+        UNION ALL
+        SELECT COUNT(*) c1 FROM tbl_project WHERE FStatus = 3 AND FCreateuser = #{userId}
+    </select>
+
+</mapper>

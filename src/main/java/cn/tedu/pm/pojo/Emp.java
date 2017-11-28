@@ -6,7 +6,7 @@ import cn.tedu.pm.pojo.*;
 import java.util.Date;
 
 public class Emp implements Serializable {
-    private String FUserID;
+    private Integer FUserID;
     private String FName;
     private String FJobNum;
     private String FMobile;
@@ -20,11 +20,11 @@ public class Emp implements Serializable {
     private String FCreateUser;
     private String FState;
 
-    public String getFUserID() {
+    public Integer getFUserID() {
         return FUserID;
     }
 
-    public void setFUserID(String FUserID) {
+    public void setFUserID(Integer FUserID) {
         this.FUserID = FUserID;
     }
 

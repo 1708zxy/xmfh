@@ -10,4 +10,8 @@ public interface UserService {
     public List<User> findAll();
 
     public void save(User user);
+
+    User findOneByUsername(String username);
+
+    List<String> findRoleNamesByUserId(Integer fUserID);
 }

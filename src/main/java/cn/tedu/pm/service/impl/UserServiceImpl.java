@@ -37,5 +37,13 @@ public class UserServiceImpl implements UserService  {
         userMapper.save(user);
     }
 
+    public User findOneByUsername(String username) {
+        return userMapper.findOneByUsername(username);
+    }
+
+    public List<String> findRoleNamesByUserId(Integer fUserID) {
+        return null;
+    }
+
 
 }

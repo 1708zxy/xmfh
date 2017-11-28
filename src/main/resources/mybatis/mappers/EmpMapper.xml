@@ -16,20 +16,20 @@
     </resultMap>
     <select id="findAll" resultMap="EmpRM">
       	SELECT * FROM
-(SELECT * FROM
-tbl_emp e
-	LEFT JOIN
-(SELECT FUserID F_id,FName F_name FROM tbl_emp)p
-	ON
-	p.F_id=e.FHiLevel) e
-		LEFT JOIN
-	(SELECT FID,FName d_fName FROM tbl_department) d
-		ON
-	e.FDeptID=d.FID
+        (SELECT * FROM
+        tbl_emp e
+            LEFT JOIN
+        (SELECT FUserID F_id,FName F_name FROM tbl_emp)p
+            ON
+            p.F_id=e.FHiLevel) e
+                LEFT JOIN
+            (SELECT FID,FName d_fName FROM tbl_department) d
+                ON
+            e.FDeptID=d.FID
     </select>
 
     <insert id="add">
-  INSERT INTO  tbl_emp(FUserID,FSex,FName,FJobNum,FMobile,FHiLevel,FEmail,FState,FEntryDate)
-VALUES (#{FUserID},#{FSex},#{FName},#{FJobNum},#{FMobile},#{FHiLevel},#{FEmail},#{FState},#{FEntryDate})
+  INSERT INTO  tbl_emp(FSex,FName,FJobNum,FMobile,FHiLevel,FEmail,FState,FEntryDate)
+VALUES (#{FSex},#{FName},#{FJobNum},#{FMobile},#{FHiLevel},#{FEmail},#{FState},#{FEntryDate})
     </insert>
 </mapper>

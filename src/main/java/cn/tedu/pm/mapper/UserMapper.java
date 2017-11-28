@@ -8,6 +8,9 @@ import java.util.List;
 public interface UserMapper {
     public User login(@Param("FName")String username, @Param("FPassword")String password);
     public List<User> findAll();
+
+
     public void save(User user);
 
+    User findOneByUsername(String username);
 }
